@@ -50,12 +50,17 @@ console.log(media);
 
 // Incremente o número 5 e retorne o seu valor incrementado
 
-let incrementado = 5
+let incrementado = 5;
 
-incrementado ++
-
+incrementado++;
 
 // Como dividir o peso por 2?
 var numero = "60";
 var unidade = "kg";
 var peso = numero + unidade;
+
+numero /= 2;
+
+console.log("pesoDiv2:", numero);
+
+console.log((peso = numero + unidade));

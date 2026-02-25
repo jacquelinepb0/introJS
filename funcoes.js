@@ -1,39 +1,57 @@
+somar(1000, 2000);
+
 // Funções
 
+// função sem parâmetro e sem retorno
 function dizerOla() {
-    console.log("Olá");    
+  console.log("Olá");
 }
 
-dizerOla()
+dizerOla();
+dizerOla();
+dizerOla();
+dizerOla();
 
-//Funções com parâmetro e com retorno
+//funções com parâmetro e com retorno
 
 function somar(num1, num2) {
-let soma = num1 + num2
-    console.log(num1+num2)  
-    return soma  
+  let soma = num1 + num2;
+  console.log(soma);
+  return soma;
 }
 
-somar(25, 1000)
+somar(25, 1000);
+
+function inverter(num) {
+  return -num;
+}
 
 //função de callback
 
-function subtrair (num1, num2, funcao) {
-    num1 - num2
-    funcao()    
+function subtrair(num1, num2, funcao) {
+  let num3 = funcao(num2);
+  console.log(somar(num1, num3));
 }
+subtrair(4, 10, inverter);
 
-subtrair(2, 10, dizerOla)
+// funcao de seta (arrow function)
 
-//função de seta (array fuction)
+const contarAlunos = (array) => {
+  return array.length;
+};
 
-const ContarAlunos = (array) => {
-    return array.length
-}
+console.log(contarAlunos(["Zenith", "Matheus", "Jacqueline", "Felipe"]));
 
-console.log(ContarAlunos(["Zenith", "Matheus", "Jacqueline"]))
+// function somar () {
+//   console.log("Outra função somar")
+// }
 
-// const ContarAlunos = (array) => console.log(array.length),console.log("oi")   > minimar com apenas 1 linha de codigo mas o return obriga a usar a chave
+//arrow function com callback
+const funcaoComCallback = (funcao) => {
+  funcao();
+};
 
-
-//arrow fuction com callback
+//funcao de callback anônima
+funcaoComCallback(() => {
+  console.log("Executando callback");
+});
